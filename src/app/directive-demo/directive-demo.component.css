@@ -1,0 +1,14 @@
+.title{
+    font-weight: bold;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+ }
+
+ .oddClass{
+  background-color: greenyellow;
+ }
+
+ .evenClass{
+  background-color: khaki;
+ }

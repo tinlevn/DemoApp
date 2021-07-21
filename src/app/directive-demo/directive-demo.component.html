@@ -1,0 +1,77 @@
+<div class="title">
+    Directive Demo Component
+</div>
+<div>
+    <h5> Structural Directive & Attribute Directive</h5>
+    <button type="button" (click)="ToggleTable()">Toggle Table</button>
+    <div *ngIf="flag;else other_content">
+        <h5> NgIf and NgFor Directive</h5>
+        <table [ngStyle]="styleObj">
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th> Phone Number </th>
+                <th>Email Address</th>
+                <th>Local Variables</th>
+            </tr>
+
+            <tr *ngFor="let employee of employees; let i = index; let e= even, let o=odd"
+                [ngClass]="{'oddClass':o,'evenClass': e}">
+                <td>{{employee.userId}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.phoneNumber}}</td>
+                <td>{{employee.emailAddress}}</td>
+                <td>{{o}}</td>
+            </tr>
+        </table>
+        <br>
+        <button type="button" (click)="ToggleBorder()"> Toggle Table border</button>
+    </div>
+
+
+    <hr>
+    <!-- if else demo -->
+    <ng-template #other_content>
+        <h5> ngSwitch Directive</h5>
+        <table [ngStyle]="styleObj">
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th> Phone Number </th>
+                <th>Email Address</th>
+                <th>Local Variables</th>
+            </tr>
+            <!-- case statement demo -->
+            <tr *ngFor="let employee of employees; let i = index; let e= even, let o=odd" [ngSwitch]="employee.userId"
+                [ngClass]="{'oddClass':o,'evenClass': e}">
+                <td *ngSwitchCase="1" [ngStyle]="{'color':'red'}">{{employee.userId}}</td>
+                <td *ngSwitchCase="2" [ngStyle]="{'color':'blue','font-weight':'bold'}">{{employee.userId }}</td>
+                <td *ngSwitchCase="3" [ngStyle]="{'color':'green','font-weight':'bold'}">{{employee.userId }}</td>
+                <td *ngSwitchCase="4" [ngStyle]="{'color':'brown','font-weight':'bold'}">{{employee.userId }}</td>
+                <td *ngSwitchDefault> {{employee.userId}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.phoneNumber}}</td>
+                <td>{{employee.emailAddress}}</td>
+                <td>{{o}}</td>
+            </tr>
+        </table>
+    </ng-template>
+
+    <h5> NgModel Attribute Directive</h5>
+    <input type="text" [ngModel]="title">
+
+    <h5> Custom Log Directive</h5>
+    <input type="text" appLogDirective>
+
+    <h5> Custom border round up Directive</h5>
+    <input type="text" [appRoundBlockDirective]="radiusvalue">
+    <div>
+        <input type="radio" checked name="radius" value="30px" (click)="radiusvalue='.30em'"> 30px
+        <input type="radio" name="radius" value="40px" (click)="radiusvalue='.50em'"> 50px
+        <input type="radio" name="radius" value="50px" (click)="radiusvalue='.80em'">80px
+    </div>
+    <hr>

@@ -1,0 +1,71 @@
+<div class="title">
+    Data Binding Component
+</div>
+<div>
+
+    <h3>Interpolation</h3>
+
+    <div>
+        {{ message}}
+    </div>
+    <div>
+        {{ greet('Class')}}
+        <!--   OR  {{ greet('Friends')}}    -->
+    </div>
+    <div>
+        {{ 'Total' + ' Price is : '+ '$' + 4*400}}
+
+    </div>
+</div>
+
+<!-- <h3>Property Binding</h3> -->
+
+<div>
+
+    <h3>Property Binding</h3>
+
+    <div>
+        <p [innerText]="message"></p>
+    </div>
+    <div>
+        <p [style.color]="color"> Style color is blue</p>
+    </div>
+    <div>
+        <input type="text" (input)="propBindingMethod($event.target)" [value]="message">
+    </div>
+    <div>
+        <br>
+        <button type="button" (click)="ToggleButton()"> Toggle Button</button> &nbsp;
+
+        <button type="button" [disabled]="flag"> Save</button>
+
+    </div>
+</div>
+
+<!-- <h3>Event Binding</h3> -->
+
+<div>
+
+    <h3>Event Binding</h3>
+
+
+    <div>
+        <input type="text" (input)="propBindingMethod($event.target)" [value]="eventBindingText">
+        {{eventBindingText}}
+    </div>
+
+</div>
+
+<!-- <h3>Two-way Data Binding</h3> -->
+
+<div>
+
+    <h3>Two-way Data Binding</h3>
+
+
+    <div>
+        <input type="text" [(ngModel)]="eventBindingText">
+        {{eventBindingText}}
+    </div>
+
+</div>

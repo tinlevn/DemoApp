@@ -1,0 +1,27 @@
+<div class="title">
+    Product Home Component
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr style="position: sticky;top:0;background-color: white;">
+            <th scope="col">Title</th>
+            <th scope="col">Type</th>
+            <th scope="col">description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let product of products;let i =index" [routerLink]="['/products/productDetails', i]">
+            <td> <a>{{product.title}}</a></td>
+            <td> <a>{{product.type}}</a></td>
+            <td><a>{{product.description}}</a></td>
+            <td><a>{{product.price}}</a></td>
+            <td><a>{{product.rating}}</a></td>
+        </tr>
+    </tbody>
+
+</table>

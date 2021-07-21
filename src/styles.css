@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+.title{
+    color: chocolate;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+ }
+
+ .borderClass{
+     border: 1PX solid red;
+     height: 24px;
+ }
+ .menu-item{
+    display: inline-flex;
+    padding: 2px;
+    margin: 2px;    
+    border-radius: .25em;
+    border: 1px outset blue;
+    cursor: pointer;
+    color: blue;
+}
+.menu-item:hover{
+    display: inline-block;
+    padding: 2px;
+    margin: 2px;
+    border-radius: .25em;
+    border: 1px ridge blue;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+.myactive{
+    background-color:lightblue;
+    color: red;
+}

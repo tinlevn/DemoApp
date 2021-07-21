@@ -1,0 +1,52 @@
+<div class="title">
+    Product Details Component
+</div>
+<div>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>
+                    <h5>Title</h5>
+                    <p>{{product.title}}</p>
+                </td>
+                <td rowspan="5">
+                    <img src="{{'assets/images/' + product.filename}}" height="{{product.height}}"
+                        width="{{product.width}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Type</h5>
+                    <p>{{product.type}}</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Description</h5>
+                    <p>{{product.description}}</p>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Price</h5>
+                    <p>{{product.price|currency}}</p>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <h5>Rating</h5>
+                    <p>{{product.rating}}</p>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+    <a [routerLink]="'/products/productHome'">Back to Product List</a>
+</div>

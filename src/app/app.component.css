@@ -1,0 +1,12 @@
+#header{
+    border: 2px outset blue;
+    width: 99.5%;
+    height: auto;
+}
+#content {
+    margin-top: 1px;
+    border: 2px outset black;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
