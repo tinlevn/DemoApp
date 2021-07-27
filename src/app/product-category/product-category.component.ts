@@ -1,4 +1,6 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ProductDataService } from '../services/product-data.service';
 
 @Component({
   selector: 'app-product-category',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productservice: ProductDataService) { }
 
+  categories = ['Fruits', 'Vegetables', 'Dairy', 'Meat', 'Bakery', 'Vegan'];
   ngOnInit(): void {
+
   }
 
 }

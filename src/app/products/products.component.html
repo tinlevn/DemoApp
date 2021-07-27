@@ -5,9 +5,12 @@
         <li class="menu-item" [routerLink]="'/products/productCategory'" [routerLinkActive]="'myactive'">
             Product Categories</li>
     </ul>
+    <div class="title">
+        Product Component
 
-</div>
-<div class="title">
-    Product Component
+        <span> <button type="button" class="btn btn-sm btn-danger float-end" (click)="navigate()">Navigate to Product
+                details
+                with incrementing ID</button></span>
+    </div>
 </div>
 <router-outlet></router-outlet>

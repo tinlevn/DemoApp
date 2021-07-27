@@ -18,6 +18,7 @@ export class ProductHomeComponent implements OnInit {
     // })
 
     this.products = this.activatedroute.snapshot.data['products'];
+    debugger;
   }
 
 }

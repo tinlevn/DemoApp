@@ -1,8 +1,19 @@
-<div id="header">
+<div id="header" style="display: block;background-color: white;">
+  <span *ngIf="!authservice.isAuthenticated; else logout">
+    <button type="button" class="btn btn-sm btn-success float-end" (click)="authservice.Login()">Login</button>
+  </span>
+  <ng-template #logout>
+    <span> <button type="button" class="btn btn-sm btn-danger float-end"
+        (click)="authservice.LogOut()">LogOut</button></span>
+  </ng-template>
+
+
+
   <app-navigation></app-navigation>
 </div>
 <div id="content">
-  <div class="title" style="font-weight: bolder;color: blue; text-align: center;font-size: x-large;">
+  <div class="title"
+    style="background-color: white;font-weight: bolder;color: blue; text-align: center;font-size: x-large;display: block;">
     App Component
     <hr>
   </div>

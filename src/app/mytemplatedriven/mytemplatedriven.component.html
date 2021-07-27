@@ -1,0 +1,25 @@
+<div class="title">
+  Template Driven Form
+</div>
+
+<div class="formclass">
+  <h4>Login</h4>
+  <form #sampleform="ngForm" (ngSubmit)="sumbitMyForm(sampleform)">
+
+    <label>First Name</label>
+    <input class="form-control" type="text" #fname="ngModel" [(ngModel)]="user.firstname" name="fname" required>
+    <span *ngIf="!fname.valid && fname.touched" style="color:red"> *required</span>
+    <br>
+
+    <label>Last Name</label>
+    <input class="form-control" #lname="ngModel" ngModel type="text" name="lname" required>
+    <span *ngIf="!sampleform.controls.lname?.valid && sampleform.controls.lname?.touched" style="color:red">
+      *required</span>
+
+    <br>
+    <button class="btn btn-primary" [disabled]="!sampleform.valid" type="submit"> Submit</button> &nbsp; &nbsp;
+    <button class="btn btn-danger" (click)="CancelSubmit()" type="button"> Cancel</button>
+
+  </form>
+
+</div>

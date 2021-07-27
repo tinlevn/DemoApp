@@ -1,7 +1,11 @@
 #header{
     border: 2px outset blue;
-    width: 99.5%;
+    width: 100%;
     height: auto;
+    padding-left: 20px;
+    
+    padding-top: 20px;
+    
 }
 #content {
     margin-top: 1px;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, DoCheck, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductDataService } from '../services/product-data.service';
 
@@ -8,18 +8,33 @@ import { ProductDataService } from '../services/product-data.service';
   styleUrls: ['./productdetails.component.css']
 })
 export class ProductdetailsComponent implements OnInit {
-
+  id = 0;
   constructor(private productservice: ProductDataService, private activatedroute: ActivatedRoute) { }
   product: any;
+
   ngOnInit() {
-    debugger
-    let id = +this.activatedroute.snapshot.params['id'];
-    id = id + 1;
 
-    this.productservice.getProductsById(id).subscribe((data) => {
-      this.product = data;
+    this.id = +this.activatedroute.snapshot.params['id'] + 1;  // snapshot way
+    this.loadData(this.id);
 
-    })
+
+
+    // this.activatedroute.params.subscribe(params => {  // observable way
+    //   this.id = +params['id'] + 1;
+    //   debugger;
+    //   this.loadData(this.id);
+    // })
+
   }
 
+
+
+
+
+  loadData(id: any) {
+    this.productservice.getProductsById(id).subscribe((data) => {
+      debugger;
+      this.product = data;
+    })
+  }
 }
