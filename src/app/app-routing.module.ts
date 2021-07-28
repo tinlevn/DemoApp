@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
-import { ErrorComponent } from './error/error.component';
+import { ErrorComponent } from './Error/error.component';
 import { HomeComponent } from './home/home.component';
 
 import { MyobservableComponent } from './my-observable/myobservable.component';
@@ -20,13 +20,9 @@ import { ProductResolverService } from './services/route-guards/products-resolve
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-
   { path: 'databinding', component: DataBindingComponent, canDeactivate: [DeactivateGaurdService], canActivate: [CanActivateAuthGaurdService] },
-  { path: 'directive-demo', component: DirectiveDemoComponent },
-  { path: 'template-driven', component: MytemplatedrivenComponent },
   { path: 'my-observable', component: MyobservableComponent },
   { path: 'parent-child', component: ParentComponent },
-  { path: 'reactive', component: MyreactiveComponent },
   {
     path: 'products', component: ProductsComponent,
     children: [

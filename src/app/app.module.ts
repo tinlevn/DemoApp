@@ -6,13 +6,9 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RoundBlockDirectiveDirective } from './directives/round-block-directive.directive';
-import { LogDirectiveDirective } from './directives/log-directive.directive';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ProductHomeComponent } from './product-home/product-home.component';
 import { ProductCategoryComponent } from './product-category/product-category.component'
 import { ProductResolverService } from './services/route-guards/products-resolver.service';
@@ -23,7 +19,9 @@ import { MyobservableComponent } from './my-observable/myobservable.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { MyreactiveComponent } from './myreactive/myreactive.component';
-import { ErrorComponent, } from './error/error.component';
+import { ErrorComponent, } from './Error/error.component';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +29,6 @@ import { ErrorComponent, } from './error/error.component';
     NavigationComponent,
     DataBindingComponent,
     DirectiveDemoComponent,
-    RoundBlockDirectiveDirective,
-    LogDirectiveDirective,
     HomeComponent,
     ProductsComponent,
     ProductdetailsComponent,
@@ -43,15 +39,12 @@ import { ErrorComponent, } from './error/error.component';
     ParentComponent,
     ChildComponent,
     MyreactiveComponent,
-    ErrorComponent
-
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    SharedModule
   ],
   providers: [ProductResolverService, CanActivateAuthGaurdService, DeactivateGaurdService],
   bootstrap: [AppComponent]
