@@ -2,6 +2,18 @@
     Home Component
 </div>
 <div>
+    <button type="button" class="btn btn-sm btn-success" (click)=" toggleLifecycleComponent()"> Toggle Lifecycle
+        Component</button>
+    <div [hidden]="flag">
+        <app-life-cycle-hooks [counter]="counterForLifeClycleHooks">
+            <div>Content from Home component in LifeCycle Hooks Component through Content Projection</div>
+        </app-life-cycle-hooks>
+        <button type="button" class="btn btn-primary btn-sm" (click)="increment()"> Increment Counter</button>&nbsp;
+        <button type="button" class="btn btn-primary btn-sm" (click)="nochange()"> No change</button>
+    </div>
+    <hr>
+</div>
+<div>
     <img src="../../assets/angular_arch1.PNG" height="450">
 
     <img src="../../assets/angular_arch2.PNG" height="450">

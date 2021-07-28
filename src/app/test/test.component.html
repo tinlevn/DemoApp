@@ -1,8 +1,0 @@
-<p>test works!</p>
-<form #sampleform="ngForm">
-
-    <label>First Name</label>
-    <input type="text" #fname="ngModel" ngModel name="fname" required>
-    <span *ngIf="!fname.valid && fname.touched" style="color:red"> *required</span>
-    <br>
-</form>

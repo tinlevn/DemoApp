@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  counterForLifeClycleHooks = 0;
+  flag = true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  increment() {
+    this.counterForLifeClycleHooks++;
+  }
+  toggleLifecycleComponent() {
+    this.flag = !this.flag;
+  }
+  nochange() {
+    ;
   }
 
 }

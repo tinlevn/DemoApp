@@ -4,6 +4,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { ErrorComponent } from './Error/error.component';
 import { HomeComponent } from './home/home.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 import { MyobservableComponent } from './my-observable/myobservable.component';
 import { MyreactiveComponent } from './myreactive/myreactive.component';
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'databinding', component: DataBindingComponent, canDeactivate: [DeactivateGaurdService], canActivate: [CanActivateAuthGaurdService] },
   { path: 'my-observable', component: MyobservableComponent },
-  { path: 'parent-child', component: ParentComponent },
+  { path: 'lifecyclehooks', component: LifeCycleHooksComponent },
   {
     path: 'products', component: ProductsComponent,
     children: [
