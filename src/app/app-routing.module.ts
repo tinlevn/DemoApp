@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnimationsDemoComponent } from './animations-demo/animations-demo.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { ErrorComponent } from './Error/error.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'my-observable', component: MyobservableComponent },
   { path: 'lifecyclehooks', component: LifeCycleHooksComponent },
   { path: 'pipe-demo', component: PipeDemoComponent },
+  { path: 'animation', component: AnimationsDemoComponent },
   {
     path: 'products', component: ProductsComponent,
     children: [

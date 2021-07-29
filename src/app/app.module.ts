@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+
+
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
@@ -13,10 +18,10 @@ import { CanActivateAuthGaurdService } from './services/route-guards/can-activat
 import { DeactivateGaurdService } from './services/route-guards/deactivate-guard.service';
 import { MyobservableComponent } from './my-observable/myobservable.component';
 import { ErrorComponent, } from './Error/error.component';
-import { SharedModule } from './shared/shared.module';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { AnimationsDemoComponent } from './animations-demo/animations-demo.component';
 
 
 
@@ -34,12 +39,16 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
     ErrorComponent,
     LifeCycleHooksComponent,
     PipeDemoComponent,
+    AnimationsDemoComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
+
+
   ],
   providers: [ProductResolverService, CanActivateAuthGaurdService, DeactivateGaurdService],
   bootstrap: [AppComponent]
