@@ -10,6 +10,7 @@ import { MyobservableComponent } from './my-observable/myobservable.component';
 import { MyreactiveComponent } from './myreactive/myreactive.component';
 import { MytemplatedrivenComponent } from './mytemplatedriven/mytemplatedriven.component';
 import { ParentComponent } from './parent/parent.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 import { ProductCategoryComponent } from './product-category/product-category.component';
 import { ProductHomeComponent } from './product-home/product-home.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'databinding', component: DataBindingComponent, canDeactivate: [DeactivateGaurdService], canActivate: [CanActivateAuthGaurdService] },
   { path: 'my-observable', component: MyobservableComponent },
   { path: 'lifecyclehooks', component: LifeCycleHooksComponent },
+  { path: 'pipe-demo', component: PipeDemoComponent },
   {
     path: 'products', component: ProductsComponent,
     children: [

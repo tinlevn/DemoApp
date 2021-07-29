@@ -16,6 +16,8 @@ import { ErrorComponent, } from './Error/error.component';
 import { SharedModule } from './shared/shared.module';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.com
     DataBindingComponent,
     ErrorComponent,
     LifeCycleHooksComponent,
+    PipeDemoComponent,
+
   ],
   imports: [
     BrowserModule,
