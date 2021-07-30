@@ -5,3 +5,33 @@
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
     <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
 </div>
+
+
+<hr>
+<div>
+    <div style="display: inline-block;width: 40vw; margin: 50px;">
+        <input #item type="text" placeholder="Enter name"> &nbsp; &nbsp;
+        <button class="btn btn-primary btn-sm" (click)="addUser(item.value)"> Add User</button>
+
+        <table>
+            <tr [@list] *ngFor="let user of users ;let i= index">
+
+                <td>{{user.name}}</td>
+                <td> <button class="btn btn-outline-primary btn-sm" (click)="removeUser(i)"> Remove User</button></td>
+            </tr>
+        </table>
+    </div>
+    <div style="display:inline-block ;width: 40vw;margin: 20px;">
+        <input #item1 type="text" placeholder="Enter name"> &nbsp; &nbsp;
+        <button class="btn btn-primary btn-sm" (click)="addUser2(item1.value)"> Add User</button>
+
+        <table>
+            <tr [@list2] *ngFor="let user2 of users2 ;let i= index">
+
+                <td>{{user2.name}}</td>
+                <td> <button class="btn btn-outline-primary btn-sm" (click)="removeUser2(i)"> Remove User</button></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
